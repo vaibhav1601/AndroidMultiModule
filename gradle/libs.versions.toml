@@ -25,6 +25,7 @@ onetapcompose = "1.0.0"
 playServicesAuth = "21.2.0"
 roomRuntime = "2.6.1"
 relam = "1.9.0"
+uiTextGoogleFonts = "1.7.0"
 
 
 [libraries]
@@ -65,6 +66,7 @@ library-sync = { module = "io.realm.kotlin:library-sync", version.ref = "library
 messagebarcompose = { module = "com.github.stevdza-san:MessageBarCompose", version.ref = "messagebarcompose" }
 onetapcompose = { module = "com.github.stevdza-san:OneTapCompose", version.ref = "onetapcompose" }
 play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
+androidx-ui-text-google-fonts = { group = "androidx.compose.ui", name = "ui-text-google-fonts", version.ref = "uiTextGoogleFonts" }
 
 
 [plugins]

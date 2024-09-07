@@ -98,6 +98,7 @@ dependencies {
         }
     }
     implementation(libs.library.sync)
+    implementation(libs.androidx.ui.text.google.fonts)
 
 
     //dagger Hilt
