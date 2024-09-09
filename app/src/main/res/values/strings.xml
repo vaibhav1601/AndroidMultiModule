@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Multimodule</string>
+    <string name="welcome">Welcome back</string>
+    <string name="sign_in">please sign in continue.</string>
 </resources>

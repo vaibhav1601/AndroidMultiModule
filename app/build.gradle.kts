@@ -127,6 +127,10 @@ dependencies {
 
     implementation(libs.desugar.jdk.libs)
  //   implementation(libs.google.services)
+
+
+    implementation(libs.onetapcompose.v1014)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
