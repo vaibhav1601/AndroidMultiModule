@@ -1,15 +1,19 @@
 package com.example.multimodule.ui.theme
+import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.lightColorScheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
+import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
+import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
+import androidx.core.view.WindowCompat
 
 private val lightScheme = lightColorScheme(
     primary = primaryLight,
@@ -267,6 +271,21 @@ fun AppTheme(
         darkTheme -> darkScheme
         else -> lightScheme
     }
+
+  /*  SideEffect {
+        val window=( view.context as Activity).window
+
+        window.statusBarColor=Color.Transparent.toArgb()
+        window.navigationBarColor=Color.Transparent.toArgb()
+
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.Q){
+            window.isNavigationBarContrastEnforced=false
+        }
+
+        val windowInsetsController=WindowCompat.getInsetsController(window,window.decorView)
+        windowInsetsController.isAppearanceLightStatusBars=!darkTheme
+        windowInsetsController.isAppearanceLightNavigationBars=!darkTheme
+    }*/
 
     MaterialTheme(
         colorScheme = colorScheme,

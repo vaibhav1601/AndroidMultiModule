@@ -24,7 +24,7 @@ class AuthenticationViewModel : ViewModel() {
 
     fun signInWithMangoAtlas(
         tokenId: String,
-        onSuccess: (Boolean) -> Unit,
+        onSuccess: () -> Unit,
         onError: (Exception) -> Unit
     ) {
 
@@ -40,10 +40,13 @@ class AuthenticationViewModel : ViewModel() {
                 }.loggedIn
 
                 withContext(Dispatchers.Main){
-                    onSuccess(result)
-                    delay(600)
-                    authantication.value=true
-
+                    if(result){
+                        onSuccess()
+                        delay(600)
+                        authantication.value=true
+                    }else{
+                        onError(Exception("User Not login "))
+                    }
                 }
 
             } catch (ex: Exception) {
