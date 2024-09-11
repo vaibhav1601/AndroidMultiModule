@@ -1,10 +1,14 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.android.realm)
-   // alias(libs.plugins.google.service)
-    alias(libs.plugins.ksp)
-    alias(libs.plugins.hilt)
+    alias(libs.plugins.jetbrains.kotlin)
+    alias(libs.plugins.dagger.hilt)
+   // alias(libs.plugins.google.services)
+    alias(libs.plugins.google.ksp)
+    alias(libs.plugins.jetbrains.kotlin.compose)
+//    id 'kotlin-kapt'
+    id("io.realm.kotlin")
+
+
 
 
 }
@@ -63,79 +67,69 @@ android {
 
 dependencies {
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.ui)
-    implementation(libs.androidx.ui.graphics)
-    implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material3)
+    implementation (libs.androidx.core.ktx)
+            implementation (libs.androidx.lifecycle.runtime.ktx)
+            implementation (libs.androidx.activity.compose)
+            implementation (libs.androidx.ui)
+            implementation (libs.androidx.ui.tooling.preview)
+            implementation (libs.androidx.material3)
+            testImplementation (libs.junit)
+            androidTestImplementation (libs.androidx.junit)
+            androidTestImplementation (libs.androidx.espresso.core)
+            androidTestImplementation (libs.androidx.ui.test.junit4)
+            debugImplementation (libs.androidx.ui.tooling)
+            debugImplementation (libs.androidx.ui.test.manifest)
 
-    //Compose Navigation
-    implementation (libs.androidx.navigation.compose)
+            // Compose Navigation
+            implementation (libs.androidx.navigation.compose)
 
-    //Firebase
-    implementation(libs.firebase.auth.ktx)
-    implementation(libs.firebase.storage.ktx)
+            // Firebase
+            implementation (libs.firebase.auth.ktx)
+            implementation (libs.firebase.storage.ktx)
 
-    //Room database
-    implementation(libs.androidx.room.runtime)
-    implementation(libs.androidx.room.compiler.processing)
-    implementation(libs.androidx.room.ktx)
+            // Room components
+            implementation (libs.androidx.room.runtime)
+            ksp (libs.androidx.room.compiler)
+            implementation (libs.androidx.room.ktx)
 
-    //Run time compose
-    implementation(libs.androidx.lifecycle.runtime.compose)
+            // Runtime Compose
+            implementation (libs.androidx.lifecycle.runtime.compose)
 
-    //Splash
-    implementation(libs.androidx.core.splashscreen)
+            // Splash API
+            implementation (libs.androidx.core.splashscreen)
 
-    //mango db Realm
+            // Mongo DB Realm
+            implementation (libs.kotlinx.coroutines.core)
+            implementation (libs.library.sync)
 
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0-native-mt"){
-        version{
-            strictly("1.6.0-native-mt")
-        }
-    }
-    implementation(libs.library.sync)
-    implementation(libs.androidx.ui.text.google.fonts)
+            // Dagger Hilt
+            implementation (libs.hilt.android)
+            ksp (libs.hilt.compiler)
+            implementation (libs.androidx.hilt.navigation.compose)
 
+            // Coil
+            implementation (libs.coil.compose)
 
-    //dagger Hilt
-    ksp(libs.dagger.hilt.compiler)
-    implementation(libs.androidx.hilt.navigation.compose)
-    implementation(libs.hilt.android)
+            // Pager - Accompanist [DEPRECATED]
+//    implementation "com.google.accompanist:accompanist-pager:0.27.0"
 
-    //Google Auth
+            // Date-Time Picker
+            implementation (libs.core)
 
-    implementation(libs.play.services.auth)
+            // CALENDAR
+            implementation (libs.calendar)
 
-    //Coil
-    implementation(libs.coil.compose)
+            // CLOCK
+            implementation (libs.clock)
 
-    //Pager
-    implementation(libs.accompanist.pager)
+            // Message Bar Compose
+            implementation (libs.messagebarcompose)
 
-    //datetime
-    implementation(libs.datetime)
+            // One-Tap Compose
+            implementation (libs.onetapcompose)
 
-    //message Bar Compose
-    implementation(libs.messagebarcompose)
-
-    //One Tap Compose
-    implementation(libs.onetapcompose)
-
-    implementation(libs.desugar.jdk.libs)
- //   implementation(libs.google.services)
-
-
-    implementation(libs.onetapcompose.v1014)
-
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.ui.test.junit4)
-    debugImplementation(libs.androidx.ui.tooling)
-    debugImplementation(libs.androidx.ui.test.manifest)
+            // Desugar JDK
+            coreLibraryDesugaring (libs.desugar.jdk.libs)
 }
+
+

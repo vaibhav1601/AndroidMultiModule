@@ -1,4 +1,4 @@
-package com.example.multimodule.presentation.components.screens
+package com.example.multimodule.presention.components
 
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.LinearOutSlowInEasing

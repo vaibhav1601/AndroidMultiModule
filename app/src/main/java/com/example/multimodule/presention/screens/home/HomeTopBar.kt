@@ -1,4 +1,4 @@
-package com.example.multimodule.presentation.components.screens.home
+package com.example.multimodule.presention.screens.home
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DateRange

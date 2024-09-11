@@ -1,4 +1,4 @@
-package com.example.multimodule.presentation.components.screens.auth
+package com.example.multimodule.presention.screens.auth
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -17,7 +17,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.multimodule.R
-import com.example.multimodule.presentation.components.screens.GoogleButton
+import com.example.multimodule.presention.components.GoogleButton
 
 
 @Composable

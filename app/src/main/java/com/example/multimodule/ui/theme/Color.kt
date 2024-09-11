@@ -218,6 +218,23 @@ val surfaceContainerHighDarkHighContrast = Color(0xFF282A2F)
 val surfaceContainerHighestDarkHighContrast = Color(0xFF33353A)
 
 
+val surfaceSmile = Color(0xFF9CCC65)
+val surfaceGreen = Color(0xFF81C784)
+val surfaceYellow = Color(0xFFFFEE58)
+val surfaceAmber = Color(0xFFFFCA28)
+val surfaceOrange = Color(0xFFFFA726)
+val surfaceDeepOrange = Color(0xFFFF5722)
+val surfaceDeepBrown= Color(0xFF795548)
+val surfaceGrey= Color(0xFFEEEEEE)
+val surfaceBlueGrey= Color(0xFFB0BEC5)
+val surfaceRed= Color(0xFFF44336)
+val surfacePink= Color(0xFFD81B60)
+val surfacePurple= Color(0xFF9C27B0)
+val surfaceIndigo= Color(0xFF5C6BC0)
+val surfaceBlue= Color(0xFF42A5F5)
+
+
+
 
 
 

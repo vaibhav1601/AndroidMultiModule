@@ -1,4 +1,4 @@
-package com.example.multimodule.presentation.components.screens.auth
+package com.example.multimodule.presention.screens.auth
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel

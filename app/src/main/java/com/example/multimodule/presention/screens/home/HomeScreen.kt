@@ -1,12 +1,10 @@
-package com.example.multimodule.presentation.components.screens.home
+package com.example.multimodule.presention.screens.home
 
 import android.annotation.SuppressLint
-import androidx.compose.animation.core.spring
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -76,7 +74,7 @@ fun HomeScreen(
                             contentAlignment = Alignment.Center){
                             Image(
                                 modifier = Modifier.height(250.dp),
-                                painter = painterResource(id = R.drawable.adhesive_strip_svgrepo_com),
+                                painter = painterResource(id = R.drawable.ic_logo),
                                 contentDescription ="Logo Image" )
                         }
                         NavigationDrawerItem(label = {

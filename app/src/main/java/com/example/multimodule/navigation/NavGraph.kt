@@ -15,10 +15,10 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import com.example.multimodule.presentation.components.screens.auth.AuthenticationScreen
-import com.example.multimodule.presentation.components.screens.auth.AuthenticationViewModel
-import com.example.multimodule.presentation.components.screens.home.DisplayAlertDialogs
-import com.example.multimodule.presentation.components.screens.home.HomeScreen
+import com.example.multimodule.presention.screens.auth.AuthenticationScreen
+import com.example.multimodule.presention.screens.auth.AuthenticationViewModel
+import com.example.multimodule.presention.components.DisplayAlertDialogs
+import com.example.multimodule.presention.screens.home.HomeScreen
 import com.example.multimodule.util.Constant
 import com.example.multimodule.util.Constant.WRITE_SCREEN_DIARY_ID
 import com.stevdzasan.messagebar.rememberMessageBarState
@@ -80,12 +80,15 @@ fun NavGraphBuilder.authenticationRoute(
                 viewModel.signInWithMangoAtlas(tokenId = token,
                     onSuccess = {
                         messageBarState.addSuccess("Successfully Authentication")
-                        viewModel.setLoading(false)
                     },
                     onError = {
                         messageBarState.addError(it)
                     }
+
                 )
+
+                viewModel.setLoading(false)
+
 
             },
             onDialogDismissed = { message ->
@@ -135,7 +138,6 @@ fun NavGraphBuilder.homeRoute(
                             currentUser
                     if(user!=null){
                         user.logOut()
-
                         withContext(Dispatchers.Main){
                             navigateAuthentication()
 

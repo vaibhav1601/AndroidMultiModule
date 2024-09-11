@@ -3,7 +3,7 @@
 
     <style name="Theme.Multimodule.MySplash" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">#FFFFFFFF</item>
-        <item name="android:windowSplashScreenAnimatedIcon" tools:ignore="NewApi">@drawable/adhesive_strip_svgrepo_com</item>
+        <item name="android:windowSplashScreenAnimatedIcon" tools:ignore="NewApi">@drawable/ic_logo</item>
         <item name="postSplashScreenTheme">@style/Theme.Multimodule</item>
     </style>
 </resources>

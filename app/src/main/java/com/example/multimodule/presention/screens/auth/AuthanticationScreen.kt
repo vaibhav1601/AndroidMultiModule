@@ -1,4 +1,4 @@
-package com.example.multimodule.presentation.components.screens.auth
+package com.example.multimodule.presention.screens.auth
 
 import android.annotation.SuppressLint
 import android.util.Log
@@ -13,7 +13,6 @@ import androidx.compose.ui.Modifier
 import com.example.multimodule.util.Constant
 import com.stevdzasan.messagebar.ContentWithMessageBar
 import com.stevdzasan.messagebar.MessageBarState
-import com.stevdzasan.onetap.OneTapGoogleButton
 import com.stevdzasan.onetap.OneTapSignInState
 import com.stevdzasan.onetap.OneTapSignInWithGoogle
 

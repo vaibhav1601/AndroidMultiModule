@@ -1,4 +1,4 @@
-package com.example.multimodule.presentation.components.screens.home
+package com.example.multimodule.presention.components
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
