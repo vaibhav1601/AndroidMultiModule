@@ -48,7 +48,7 @@ fun HomeScreen(
                 FloatingActionButton(
                     onClick = navigateToWrite
                 ) {
-                    Icon(imageVector = Icons.Default.Edit, contentDescription = "New Diary icon")
+                    Icon(imageVector = Icons.Default.Edit, contentDescription = "New com.example.multimodule.model.Diary icon")
                 }
             },
             content = {}

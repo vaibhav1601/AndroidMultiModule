@@ -3,6 +3,7 @@ package com.example.multimodule.navigation
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -19,6 +20,7 @@ import com.example.multimodule.presention.screens.auth.AuthenticationScreen
 import com.example.multimodule.presention.screens.auth.AuthenticationViewModel
 import com.example.multimodule.presention.components.DisplayAlertDialogs
 import com.example.multimodule.presention.screens.home.HomeScreen
+import com.example.multimodule.repository.MangoDB
 import com.example.multimodule.util.Constant
 import com.example.multimodule.util.Constant.WRITE_SCREEN_DIARY_ID
 import com.stevdzasan.messagebar.rememberMessageBarState
@@ -126,6 +128,11 @@ fun NavGraphBuilder.homeRoute(
             navigateToWrite = navigateToWrite,
 
         )
+
+
+        LaunchedEffect(key1 = Unit) {
+            MangoDB.configureTheRealm()
+        }
 
         DisplayAlertDialogs(
             title = "Sign out",

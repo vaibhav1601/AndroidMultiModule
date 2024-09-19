@@ -1,16 +1,17 @@
+import org.jetbrains.kotlin.gradle.internal.Kapt3GradleSubplugin.Companion.isIncrementalKapt
+
 plugins {
     alias(libs.plugins.android.application)
+    id("io.realm.kotlin")
+  //  id("realm-android")
+    id("kotlin-android")
+
     alias(libs.plugins.jetbrains.kotlin)
     alias(libs.plugins.dagger.hilt)
    // alias(libs.plugins.google.services)
     alias(libs.plugins.google.ksp)
     alias(libs.plugins.jetbrains.kotlin.compose)
 //    id 'kotlin-kapt'
-    id("io.realm.kotlin")
-
-
-
-
 }
 
 android {
@@ -42,6 +43,7 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
+
     }
     kotlinOptions {
         jvmTarget = "1.8"
